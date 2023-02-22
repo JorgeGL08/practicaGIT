@@ -21,6 +21,9 @@ public class Practica1 {
         System.out.println("+ = sumar \n - = restar \n x = multiplicar \n / = dividir \n * = elevar primer num al segon num."
                         + "\n % = residu");
     }
+    public static void mostrarPedirNumero(String numero){
+        System.out.println("\n Introdueix el " + numero + " numero. ");
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -32,7 +35,7 @@ public class Practica1 {
 
             String numero1;
             do {
-                System.out.println("\n Introdueix el primer numero. ");
+                mostrarPedirNumero("primer");
                 numero1 = sc.nextLine();
             } while (!numero1.matches("[+-]?[\\d]*[.]?[\\d]+"));
             double nume1 = Double.parseDouble(numero1);
