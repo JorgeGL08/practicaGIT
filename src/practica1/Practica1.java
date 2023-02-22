@@ -16,12 +16,18 @@ public class Practica1 {
     /**
      * @param args the command line arguments
      */
+    public static void mostrarMenu(){
+        System.out.println("\n Operació? (Indica el signe)");
+        System.out.println("+ = sumar \n - = restar \n x = multiplicar \n / = dividir \n * = elevar primer num al segon num."
+                        + "\n % = residu");
+    }
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double res = 0;
         String operacion;
         boolean comprobar = false;
-
+         
         do {
 
             String numero1;
@@ -33,10 +39,7 @@ public class Practica1 {
             double n1 = new Double(numero1);
 
             do {
-                System.out.println("\n Introduce la operacion a realizar");
-                System.out.println("+ -> sumar \n - -> restar \n"
-                        + " x -> multiplicar \n / -> dividir \n * -> elevar primer numero al segundo numero."
-                        + "\n % -> resto");
+                mostrarMenu();
                 operacion = sc.nextLine();
                 if (operacion.equals("+") || operacion.equals("-") || operacion.equals("x")
                         || operacion.equals("X") || operacion.equals("/") || operacion.equals("%")
